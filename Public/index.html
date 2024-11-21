@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Familiar</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado con imagen -->
+        <header>
+            <img src="./images.png" alt="Logo de la Biblioteca" id="header-logo">
+            <h1>Biblioteca Familiar</h1>
+        </header>
+
+        <!-- Formulario para añadir libros -->
+        <section id="add-book">
+            <h2>Añadir Libro</h2>
+            <form id="addBookForm">
+                <input type="text" id="autor" placeholder="Autor" required>
+                <input type="text" id="titulo" placeholder="Título" required>
+                <input type="text" id="genero" placeholder="Género" required>
+                <input type="number" id="puerta" placeholder="Puerta" min="1" max="4" required>
+                <input type="number" id="balda" placeholder="Balda" min="1" max="6" required>                
+                <button type="submit">Añadir</button>
+            </form>
+        </section>
+
+        <!-- Lista de libros con buscador -->
+        <section id="list-books">
+            <h2>Lista de Libros</h2>
+            <input type="text" id="searchBox" placeholder="Buscar por título o autor..." oninput="filterBooks()">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Autor</th>
+                        <th>Título</th>
+                        <th>Género</th>
+                        <th>Puerta</th>
+                        <th>Balda</th>
+                    </tr>
+                </thead>
+                <tbody id="booksTable">
+                    <!-- Libros se cargarán aquí dinámicamente -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
